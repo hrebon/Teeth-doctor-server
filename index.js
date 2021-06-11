@@ -1,6 +1,7 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const fileUpload = require('express-fileupload');
 const MongoClient = require('mongodb').MongoClient;
 require('dotenv').config()
 
@@ -16,7 +17,7 @@ app.use(fileUpload());
 const port = 5000;
 
 app.get('/', (req, res) =>{
-    res.send("hello from db it's working work")
+    res.send("heroku is not working")
 })
 
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
